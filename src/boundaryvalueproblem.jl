@@ -75,7 +75,7 @@ end
 Solve BVP differential equations with Dirichlet boundary conditions by 2 IVP differential equations according to `method` ∈ {`:jacobi`, `:gauss_seidel` (default), `:successive_relaxation`, `:newton_raphson`} within numerical iterations, `M` and tolerance, `tol`.
 
 Uses a Taylor polynomial with a first-order and a second-order IVP equations.
-*Converges ``𝒪(h²)``*.
+*Converges 𝒪(h²)*.
 """
 function finite_difference_method(BVP::BoundaryValueProblem; method::Symbol=:gauss_seidel, M::Int64=100, tol::Real=10^-6)::Vector{Float64}
     p, q, r = BVP.f

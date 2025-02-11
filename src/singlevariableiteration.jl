@@ -179,7 +179,7 @@ Theorem:
     If g ∈ C[a,b] and g(x) ∈ C[a, b] for all x ∈ [a, b], then function, g has a fixed point, p ∈ [a, b].
 2) Uniqueness of a fixed point:
     If g'(x) exists on [a, b] and a positive constant, k < 1 exist with {|g'(x)| ≤ k | x ∈ (a, b)}, then there is exactly one fixed-point, p ∈ [a, b].
-Converges by ``\\mathcal{O}(\\text{linear})`` if g'(p) ≠ 0, and ``\\mathcal{O}(\\text{quadratic})`` if g'(p) = 0 and g''(p) < M, where M = g''(ξ) that is the error function.
+Converges by ``𝒪(linear)`` if g'(p) ≠ 0, and ``𝒪(quadratic)`` if g'(p) = 0 and g''(p) < M, where M = g''(ξ) that is the error function.
 """
 fixed_point(SVI::SingleVariableIteration, p0::Float64) = solve(SVI; method=:fixed_point, p0=p0)
 

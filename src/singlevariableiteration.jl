@@ -112,6 +112,7 @@ function solve(SVI::SingleVariableIteration;
             end
             return (k <= N && isassigned(g, k)) ? g[k] : NaN
         else # abort if f(a) is not opposite f(b)
+            # TODO [20251120T1427] (JMA3): improve this error message if f(p0)*f(p1) ≥ 0
             throw(IntervalBoundsError(SVI.f, SVI.a, SVI.b))
         end
     elseif method ∈ (:fixed_point, :newton_raphson)
